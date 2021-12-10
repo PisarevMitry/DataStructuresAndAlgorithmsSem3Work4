@@ -241,7 +241,7 @@ void BinarySearchTree::checkedSearch(const std::string &movieKey) {
     clock_t start, end;
 
     start = clock();
-
+    searchMovie(movieKey);
     std::ifstream stream;
     Movie movie;
     int i;

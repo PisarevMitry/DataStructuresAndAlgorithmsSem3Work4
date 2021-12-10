@@ -115,6 +115,7 @@ void FileControlClass::checkedSearch(const std::string &movieKey) {
     std::ifstream stream;
     Movie movie;
     int i;
+    search(movieKey);
     stream.open(fileNameBIN, std::ios::binary);
     if (stream.is_open()) {
         for (i = 0; i < numberMovies; i++) {

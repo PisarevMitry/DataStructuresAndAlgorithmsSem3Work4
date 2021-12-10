@@ -82,7 +82,7 @@ public:
 
     void deleteMovie(const std::string &title);
 
-    void checkedSearch(const std::string &movieKey) const;
+    void checkedSearch(const std::string &movieKey);
 };
 
 #endif

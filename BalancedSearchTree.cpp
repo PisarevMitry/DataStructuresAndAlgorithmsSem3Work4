@@ -670,12 +670,13 @@ void BalancedSearchTree::outputTree(BalancedTreeNode *treeNode, int level, const
     }
 }
 
-void BalancedSearchTree::checkedSearch(const std::string &movieKey) const {
+void BalancedSearchTree::checkedSearch(const std::string &movieKey) {
     std::cout << "Проверка " << numberMovies << " элементов в файле:" << std::endl;
     clock_t start, end;
 
     start = clock();
 
+    searchMovie(movieKey);
     std::ifstream stream;
     Movie movie;
     int i;
