@@ -4,6 +4,29 @@
 
 using namespace std;
 
+void test() {
+    cout << "Линейный поиск в файле" << endl;
+    FileControlClass *fileControlClass;
+    fileControlClass = new FileControlClass("data.txt");
+    fileControlClass->checkedSearch("Sp6lfmtmfK");
+    fileControlClass->checkedSearch("k6nv0qHLL8");
+    fileControlClass->checkedSearch("zOV4uOLKeW");
+
+    cout << "Поиск по бинарному дереву поиска" << endl;
+    BinarySearchTree *binarySearchTree;
+    binarySearchTree = new BinarySearchTree();
+    binarySearchTree->checkedSearch("Sp6lfmtmfK");
+    binarySearchTree->checkedSearch("k6nv0qHLL8");
+    binarySearchTree->checkedSearch("zOV4uOLKeW");
+
+    cout << "Поиск по сбалансированному В-дереву" << endl;
+    BalancedSearchTree *balancedSearchTree;
+    balancedSearchTree = new BalancedSearchTree();
+    balancedSearchTree->checkedSearch("Sp6lfmtmfK");
+    balancedSearchTree->checkedSearch("k6nv0qHLL8");
+    balancedSearchTree->checkedSearch("zOV4uOLKeW");
+}
+
 int main() {
     setlocale(LC_ALL, "rus");
     cout
@@ -12,6 +35,7 @@ int main() {
                "\n1 - Класс управления файлом;"
                "\n2 - Класс «Бинарное дерево поиска»;"
                "\n3 - Класс «Сбалансированное дерево поиска»;"
+               "\n4 - Тестирование времени поиска записей в начале/середине/конце файла для каждого класса;"
                "\n0 - Закончить;\n";
     int classMode;
     int mode;
@@ -172,6 +196,9 @@ int main() {
             } while (mode != 0);
         }
             break;
+        case 4: {
+            test();
+        }
         default:
             break;
     }

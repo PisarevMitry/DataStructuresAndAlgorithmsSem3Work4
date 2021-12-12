@@ -267,7 +267,7 @@ void BinarySearchTree::checkedSearch(const std::string &movieKey) {
         result = " в конце файла ";
     }
     std::cout << "Выполнен поиск" + result + "за ";
-    printf("%.2f секунд(ы)\n", ((double) end - start) / ((double) CLOCKS_PER_SEC));
+    printf("%.10f секунд(ы)\n", ((double) end - start) / ((double) CLOCKS_PER_SEC));
 }
 
 TreeNode::TreeNode() {
